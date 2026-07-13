@@ -1,0 +1,107 @@
+======================================================================
+STEP 1: DESCRIPTIVE STATISTICS FOR NUMERICAL COLUMNS
+======================================================================
+                       count         mean  ...       max  median
+Average Cost for two  9551.0  1199.210763  ...  800000.0   400.0
+Price range           9551.0     1.804837  ...       4.0     2.0
+Aggregate rating      9551.0     2.666370  ...       4.9     3.2
+Votes                 9551.0   156.909748  ...   10934.0    31.0
+
+[4 rows x 9 columns]
+
+======================================================================
+STEP 2: DISTRIBUTION OF CATEGORICAL VARIABLES
+======================================================================
+
+Unique Country Codes : 15
+Country Code
+1      8652
+216     434
+215      80
+30       60
+214      60
+189      60
+148      40
+208      34
+14       24
+162      22
+Name: count, dtype: int64
+
+Unique Cities        : 141
+City
+New Delhi       5473
+Gurgaon         1118
+Noida           1080
+Faridabad        251
+Ghaziabad         25
+Ahmedabad         21
+Amritsar          21
+Bhubaneshwar      21
+Guwahati          21
+Lucknow           21
+Name: count, dtype: int64
+
+Unique Cuisine combos: 1826
+Cuisines
+North Indian                      936
+North Indian, Chinese             511
+Chinese                           354
+Fast Food                         354
+North Indian, Mughlai             334
+Cafe                              299
+Bakery                            218
+North Indian, Mughlai, Chinese    197
+Bakery, Desserts                  170
+Street Food                       149
+Name: count, dtype: int64
+
+======================================================================
+STEP 3: TOP CUISINES AND CITIES BY NUMBER OF RESTAURANTS
+======================================================================
+
+Top 10 individual cuisines (restaurant serves this cuisine):
+Cuisines
+North Indian    3960
+Chinese         2735
+Fast Food       1986
+Mughlai          995
+Italian          764
+Bakery           745
+Continental      736
+Cafe             703
+Desserts         653
+South Indian     636
+Name: count, dtype: int64
+
+Top 10 cities by number of restaurants:
+City
+New Delhi       5473
+Gurgaon         1118
+Noida           1080
+Faridabad        251
+Ghaziabad         25
+Ahmedabad         21
+Amritsar          21
+Bhubaneshwar      21
+Guwahati          21
+Lucknow           21
+Name: count, dtype: int64
+
+Saved chart -> output_top_cuisines.png
+Saved chart -> output_top_cities.png
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. Average cost for two ranges widely; mean = 1199.21,
+   median = 400.00, indicating a right-skewed
+   distribution with some very expensive outliers.
+2. The dataset spans 15 countries and
+   141 cities, but restaurant density is heavily
+   concentrated in a small number of cities (see top 10 list above).
+3. The most common individual cuisine is 'North Indian',
+   followed by 'Chinese' and 'Fast Food'.
+4. 'New Delhi' has the highest number of listed restaurants
+   in this dataset.
+

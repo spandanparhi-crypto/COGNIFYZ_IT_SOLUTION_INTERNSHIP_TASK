@@ -1,0 +1,54 @@
+======================================================================
+STEP 1: FEATURE PREPARATION
+======================================================================
+Features used: ['Country Code', 'City_encoded', 'Longitude', 'Latitude', 'Average Cost for two', 'Has Table booking', 'Has Online delivery', 'Is delivering now', 'Switch to order menu', 'Price range', 'Votes', 'Restaurant Name Length', 'Address Length', 'Cuisine Count']
+Rows used for modeling (Votes > 0): 8457 / 9551
+
+Training set size: 6765
+Testing set size : 1692
+
+======================================================================
+STEP 2: TRAINING AND EVALUATING MODELS
+======================================================================
+
+Linear Regression:
+  MAE      : 0.7818
+  RMSE     : 1.0572
+  R2 Score : 0.2669
+
+Decision Tree:
+  MAE      : 0.2453
+  RMSE     : 0.3510
+  R2 Score : 0.9192
+
+Random Forest:
+  MAE      : 0.2266
+  RMSE     : 0.3249
+  R2 Score : 0.9308
+
+======================================================================
+MODEL COMPARISON TABLE
+======================================================================
+            Model      MAE     RMSE  R2 Score
+    Random Forest 0.226551 0.324867  0.930776
+    Decision Tree 0.245255 0.351024  0.919180
+Linear Regression 0.781808 1.057201  0.266903
+
+Saved chart -> output_model_comparison_r2.png
+Saved chart -> output_feature_importance.png
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. Three regression algorithms were trained: Linear Regression, Decision
+   Tree, and Random Forest.
+2. Based on R2 score on the held-out test set, 'Random Forest' performed
+   best (R2 = 0.9308), meaning it explains the
+   largest share of variance in Aggregate rating among the three models.
+3. Tree-based models (Decision Tree, Random Forest) outperform plain
+   Linear Regression here, suggesting non-linear relationships between
+   features (e.g., Votes, Price range) and the rating.
+4. According to the Random Forest feature importance chart, the top
+   drivers of predicted rating are: Votes, Longitude, Latitude.
+

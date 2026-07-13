@@ -1,0 +1,75 @@
+Restaurants with valid coordinates: 9052 / 9551
+Saved chart -> output_restaurant_locations_map.png
+Saved chart -> output_locations_by_rating.png
+
+======================================================================
+STEP 2: RESTAURANT DISTRIBUTION BY COUNTRY / CITY
+======================================================================
+
+Restaurant counts per Country Code (top 10):
+Country Code
+1      8652
+216     434
+215      80
+30       60
+214      60
+189      60
+148      40
+208      34
+14       24
+162      22
+Name: count, dtype: int64
+
+Restaurant counts per City (top 10):
+City
+New Delhi       5473
+Gurgaon         1118
+Noida           1080
+Faridabad        251
+Ghaziabad         25
+Ahmedabad         21
+Amritsar          21
+Bhubaneshwar      21
+Guwahati          21
+Lucknow           21
+Name: count, dtype: int64
+
+Saved chart -> output_restaurants_per_country.png
+
+======================================================================
+STEP 3: CORRELATION BETWEEN LOCATION AND RATING
+======================================================================
+Correlation (Latitude  vs Aggregate rating) : -0.1244
+Correlation (Longitude vs Aggregate rating) : -0.2065
+
+Average Aggregate rating for the 10 busiest cities:
+City
+Lucknow         4.195238
+Guwahati        4.190476
+Ahmedabad       4.161905
+Bhubaneshwar    3.980952
+Amritsar        3.685714
+Ghaziabad       2.852000
+Gurgaon         2.651431
+New Delhi       2.438845
+Noida           2.036204
+Faridabad       1.866932
+Name: Aggregate rating, dtype: float64
+Saved chart -> output_avg_rating_by_city.png
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. The scatter map shows restaurants are clustered in a handful of
+   geographic hotspots (major metro areas) rather than being evenly
+   spread globally.
+2. Latitude vs rating correlation = -0.1244, Longitude vs rating
+   correlation = -0.2065. Both values are close to zero, meaning
+   there is little to no *linear* correlation between a restaurant's raw
+   geographic coordinates and its rating.
+3. However, average ratings DO vary meaningfully city-by-city, which
+   suggests rating differences are driven more by local market/city-level
+   factors (competition, cuisine variety, price point) than by raw
+   latitude/longitude position itself.
+

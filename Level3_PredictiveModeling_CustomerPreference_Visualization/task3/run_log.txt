@@ -1,0 +1,23 @@
+Saved chart -> output_rating_distribution_combo.png
+Saved chart -> output_avg_rating_cuisine_city.png
+/home/claude/project/level3/task3/task3_data_visualization.py:98: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+  axes[1, 0].boxplot(price_groups, labels=sorted(df["Price range"].unique()),
+/home/claude/project/level3/task3/task3_data_visualization.py:106: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+  axes[1, 1].boxplot(booking_groups, labels=["Yes", "No"],
+Saved chart -> output_feature_vs_rating_relationships.png
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. The rating histogram/box plot confirms a spike at 0.0 (unrated
+   restaurants) with the remaining ratings roughly following a
+   left-skewed distribution concentrated between 3.0 and 4.5.
+2. Certain cuisines and cities consistently achieve higher average
+   ratings than others, useful for benchmarking restaurant performance.
+3. Scatter/box plots show: (a) restaurants with more votes tend to have
+   higher, more stable ratings, (b) higher price range and having table
+   booking both associate with modestly higher median ratings, showing
+   these features carry real predictive signal for the Level 3 - Task 1
+   regression models.
+

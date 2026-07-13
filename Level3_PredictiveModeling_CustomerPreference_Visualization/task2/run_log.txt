@@ -1,0 +1,102 @@
+======================================================================
+STEP 1: AVERAGE RATING BY CUISINE (cuisines with >= 30 restaurants)
+======================================================================
+Cuisines
+Sandwich         4.066038
+Steak            3.985484
+Sushi            3.973333
+Breakfast        3.965854
+Mediterranean    3.948214
+Bar Food         3.933333
+Indian           3.918571
+European         3.910811
+BBQ              3.903030
+Seafood          3.862069
+Asian            3.815021
+Japanese         3.797037
+Mexican          3.723204
+American         3.661538
+Thai             3.659829
+Italian          3.562042
+Burger           3.520717
+Continental      3.518750
+Lebanese         3.433333
+Cafe             3.321195
+Finger Food      3.276316
+Salad            3.165591
+Healthy Food     3.081333
+Desserts         2.978867
+Pizza            2.921785
+Tea              2.818750
+Beverages        2.740175
+Chinese          2.621024
+Mughlai          2.609950
+Ice Cream        2.583186
+Fast Food        2.563092
+North Indian     2.510455
+South Indian     2.469811
+Bakery           2.440940
+Biryani          2.420339
+Street Food      2.356050
+Tibetan          2.302273
+Raw Meats        2.152632
+Mithai           2.073684
+Name: Aggregate rating, dtype: float64
+
+Saved chart -> output_top_rated_cuisines.png
+
+======================================================================
+STEP 2: MOST POPULAR CUISINES BY TOTAL VOTES
+======================================================================
+Cuisines
+North Indian     595981
+Chinese          364351
+Italian          329265
+Continental      288255
+Fast Food        184058
+American         183117
+Cafe             177568
+Mughlai          151946
+Desserts         105889
+Asian            104303
+European         103309
+South Indian      80962
+Mediterranean     80538
+Pizza             78179
+Burger            76747
+Name: Votes, dtype: int64
+
+Saved chart -> output_most_popular_cuisines_votes.png
+
+======================================================================
+STEP 3: CUISINES WITH CONSISTENTLY HIGH RATINGS
+======================================================================
+                   mean       std  count
+Cuisines                                
+Sandwich       4.066038  0.503810     53
+Steak          3.985484  0.405231     62
+Sushi          3.973333  0.366626     75
+Breakfast      3.965854  0.440233     41
+Mediterranean  3.948214  0.674234    112
+Bar Food       3.933333  1.030415     39
+Indian         3.918571  1.077341     70
+European       3.910811  0.680949    148
+BBQ            3.903030  0.831221     33
+Seafood        3.862069  0.696190    174
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. Among cuisines with a meaningful sample size (>=30 restaurants),
+   'Sandwich' has the highest average rating
+   (4.07), followed by
+   'Steak' and 'Sushi'.
+2. Based on total customer votes, 'North Indian' is the
+   most popular cuisine overall, indicating strong customer engagement
+   even if it isn't always the highest-rated.
+3. Cuisines with both a high average rating AND low standard deviation
+   (see table above) represent consistently well-reviewed categories,
+   making them a safer bet for customers versus cuisines with high
+   variance in ratings.
+

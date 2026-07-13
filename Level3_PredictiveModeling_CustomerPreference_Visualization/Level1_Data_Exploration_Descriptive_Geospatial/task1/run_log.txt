@@ -1,0 +1,115 @@
+======================================================================
+STEP 1: BASIC SHAPE OF THE DATASET
+======================================================================
+Number of rows    : 9551
+Number of columns : 21
+
+Column names:
+['Restaurant ID', 'Restaurant Name', 'Country Code', 'City', 'Address', 'Locality', 'Locality Verbose', 'Longitude', 'Latitude', 'Cuisines', 'Average Cost for two', 'Currency', 'Has Table booking', 'Has Online delivery', 'Is delivering now', 'Switch to order menu', 'Price range', 'Aggregate rating', 'Rating color', 'Rating text', 'Votes']
+
+======================================================================
+STEP 2: MISSING VALUES PER COLUMN
+======================================================================
+          Missing Count  Missing %
+Cuisines              9       0.09
+
+Missing values handled -> 'Cuisines' NaNs filled with 'Not Specified'.
+Remaining missing values: 0
+
+======================================================================
+STEP 3: DATA TYPES (BEFORE CONVERSION)
+======================================================================
+Restaurant ID             int64
+Restaurant Name             str
+Country Code              int64
+City                        str
+Address                     str
+Locality                    str
+Locality Verbose            str
+Longitude               float64
+Latitude                float64
+Cuisines                    str
+Average Cost for two      int64
+Currency                    str
+Has Table booking           str
+Has Online delivery         str
+Is delivering now           str
+Switch to order menu        str
+Price range               int64
+Aggregate rating        float64
+Rating color                str
+Rating text                 str
+Votes                     int64
+dtype: object
+
+======================================================================
+STEP 3b: DATA TYPES (AFTER CONVERSION)
+======================================================================
+Restaurant ID              int64
+Restaurant Name              str
+Country Code            category
+City                         str
+Address                      str
+Locality                     str
+Locality Verbose             str
+Longitude                float64
+Latitude                 float64
+Cuisines                     str
+Average Cost for two       int64
+Currency                     str
+Has Table booking       category
+Has Online delivery     category
+Is delivering now       category
+Switch to order menu    category
+Price range             category
+Aggregate rating         float64
+Rating color            category
+Rating text             category
+Votes                      int64
+dtype: object
+
+======================================================================
+STEP 4: DISTRIBUTION OF TARGET VARIABLE 'Aggregate rating'
+======================================================================
+count    9551.000000
+mean        2.666370
+std         1.516378
+min         0.000000
+25%         2.500000
+50%         3.200000
+75%         3.700000
+max         4.900000
+Name: Aggregate rating, dtype: float64
+
+Restaurants with Aggregate rating = 0 (Not Rated): 2148 (22.49% of data)
+
+Count of restaurants per Rating text (class imbalance check):
+Rating text
+Average      3737
+Not rated    2148
+Good         2100
+Very Good    1079
+Excellent     301
+Poor          186
+Name: count, dtype: int64
+
+Saved chart -> output_aggregate_rating_distribution.png
+Saved chart -> output_rating_text_class_imbalance.png
+
+Cleaned dataset saved -> cleaned_dataset.csv
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. The dataset has 9,551 rows and 21 columns.
+2. Only the 'Cuisines' column had missing values (9 rows) which were
+   filled with 'Not Specified'.
+3. Several numeric-looking columns (Country Code, Price range, Rating
+   color, Rating text) were converted to 'category' dtype since they
+   represent categorical/labelled data rather than continuous numbers.
+4. The 'Aggregate rating' distribution shows a strong class imbalance:
+   a large share of restaurants have a rating of 0.0 (Not Rated), while
+   genuine ratings mostly cluster between 2.5 and 4.5. This imbalance
+   should be considered before building any predictive model (Level 3).
+
