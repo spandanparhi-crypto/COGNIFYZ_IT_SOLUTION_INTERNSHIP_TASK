@@ -1,0 +1,44 @@
+======================================================================
+STEP 1: PERCENTAGE OF RESTAURANTS OFFERING EACH SERVICE
+======================================================================
+Restaurants offering Table Booking : 12.12%
+Restaurants offering Online Delivery: 25.66%
+
+Saved chart -> output_service_availability_pct.png
+
+======================================================================
+STEP 2: AVERAGE RATING - TABLE BOOKING vs NO TABLE BOOKING
+======================================================================
+Has Table booking
+No     2.559359
+Yes    3.441969
+Name: Aggregate rating, dtype: float64
+Saved chart -> output_avg_rating_table_booking.png
+
+======================================================================
+STEP 3: ONLINE DELIVERY AVAILABILITY BY PRICE RANGE
+======================================================================
+Price range
+1    15.774077
+2    41.310633
+3    29.190341
+4     9.044369
+Name: Has Online delivery, dtype: float64
+
+Saved chart -> output_delivery_by_price_range.png
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. Only 12.12% of restaurants offer table booking,
+   while 25.66% offer online delivery.
+2. Restaurants that offer table booking have a noticeably higher average
+   rating (3.44) compared to those that
+   do not (2.56). This may reflect that
+   higher-end / more established restaurants tend to offer booking.
+3. Online delivery availability is highest among lower/mid price-range
+   restaurants (price range 1-2) and drops off for the most expensive
+   restaurants (price range 4), which more often rely on dine-in/booking
+   rather than delivery.
+

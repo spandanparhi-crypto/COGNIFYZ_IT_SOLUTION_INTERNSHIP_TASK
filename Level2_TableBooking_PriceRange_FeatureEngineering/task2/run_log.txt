@@ -1,0 +1,60 @@
+======================================================================
+STEP 1: MOST COMMON PRICE RANGE
+======================================================================
+Price range
+1    4444
+2    3113
+3    1408
+4     586
+Name: count, dtype: int64
+
+Most common price range: 1 (4444 restaurants)
+
+Saved chart -> output_price_range_counts.png
+
+======================================================================
+STEP 2: AVERAGE RATING PER PRICE RANGE
+======================================================================
+Price range
+1    1.999887
+2    2.941054
+3    3.683381
+4    3.817918
+Name: Aggregate rating, dtype: float64
+
+Saved chart -> output_avg_rating_by_price_range.png
+
+======================================================================
+STEP 3: RATING COLOR FOR HIGHEST-RATED PRICE RANGE
+======================================================================
+Price range with the highest average rating: 4 (avg rating = 3.82)
+
+Average Aggregate rating for each Rating color band:
+Rating color
+Dark Green    4.659801
+Green         4.168119
+Yellow        3.683429
+Orange        3.051619
+Red           2.297849
+Name: Aggregate rating, dtype: float64
+
+==> The color representing the highest average rating overall is: 'Dark Green' (avg rating = 4.66)
+
+The average rating of the top price range (3.82) falls closest to the 'Yellow' color band.
+
+======================================================================
+SUMMARY / INSIGHTS
+======================================================================
+
+1. The most common price range is 1, with
+   4444 restaurants.
+2. Average rating increases with price range: range 1 has the lowest
+   average rating, while range 4 has the highest average
+   rating (3.82). This suggests pricier
+   restaurants tend to be rated somewhat better on average.
+3. Across the platform's rating-color scale, 'Dark Green' is the color
+   that represents the highest average rating band overall (typically
+   used for 'Excellent' reviews). The top price range's average rating
+   of 3.82 falls closest to the 'Yellow' color
+   band on that scale.
+
